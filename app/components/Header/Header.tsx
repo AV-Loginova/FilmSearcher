@@ -1,4 +1,5 @@
 import React from "react";
+import NavInput from "./NavInput";
 import NavItem from "./NavItem";
 import { IoHome, IoInformationCircle } from "react-icons/io5";
 
@@ -17,11 +18,7 @@ function Header() {
       </nav>
       {/* <div className="flex-none gap-2"> */}
       {/* <div className="form-control"> */}
-      <input
-        type="text"
-        placeholder="Search"
-        className="input input-bordered w-[250px] md:w-auto"
-      />
+      <NavInput />
       {/* </div> */}
       {/* <div className="dropdown dropdown-end">
           <div
