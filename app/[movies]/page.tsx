@@ -9,45 +9,44 @@ interface Rating {
   Value: string;
 }
 
-interface Props {
-  props: {
-    Title: string;
-    Plot: string;
-    Poster: string;
-    Year: string;
-    Rated: string;
-    Genre: string;
-    Runtime: string;
-    Director: string;
-    Actors: string;
-    Country: string;
-    Ratings: Rating[];
-    BoxOffice: string;
-    Response: string;
-  };
+interface MovieData {
+  Title: string;
+  Plot: string;
+  Poster: string;
+  Year: string;
+  Rated: string;
+  Genre: string;
+  Runtime: string;
+  Director: string;
+  Actors: string;
+  Country: string;
+  Ratings: Rating[];
+  BoxOffice: string;
+  Response: string;
 }
 
 function Dynamic() {
   const movie = usePathname();
   const route = useRouter();
 
-  const [movieData, setMovieData] = useState<any>(null);
+  const [movieData, setMovieData] = useState<MovieData | null>(null);
 
   useEffect(() => {
     const fetchMovieData = async () => {
       try {
         if (!movie) return;
         const response = await fetch(
-          `https://www.omdbapi.com/?apikey=57a8c5c7&t=${movie}`
+          `https://www.omdbapi.com/?apikey=57a8c5c7&t=${movie.trim()}`
         );
         if (!response.ok) {
           throw new Error("Failed to fetch movie data");
         }
-        const data = await response.json();
+        const data: MovieData = await response.json();
         if (data.Response === "False") {
           route.push("/error");
+        } else {
+          setMovieData(data);
         }
-        setMovieData(data);
       } catch (error) {
         console.error("Error fetching movie data:", error);
       }
