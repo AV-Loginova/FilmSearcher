@@ -8,17 +8,28 @@ This project is a Movie Search Application built using React and Next.js. It all
 **Dynamic Display**: The application dynamically fetches movie data from the OMDb API based on user input.  
 **Responsive Design**: The application is designed to adapt to various screen sizes for optimal viewing experience.  
 
-## Installation:
 
-**Clone the repository**: git clone <repository-url>    
-**Navigate to the project directory**: cd movie-search-app  
-**Install dependencies**: npm install  
+## Installation
+1) Clone the repository  
+```
+git clone https://github.com/AV-Loginova/FilmSearcher
+```
+2) Navigate to the project directory
+```
+cd FilmSearcher
+```
+3) Install dependencies
+```
+npm i
+```
+4) Run the application
+```
+npm run start
+```
 
 ## Usage:
 
-1) Start the development server: npm run dev
-2) Open your browser and navigate to http://localhost:3000
-3) Enter a movie title in the search bar and press Enter to view details about the movie.
+ Enter a movie title in the search bar and press Enter to view details about the movie.
 
 ## API Used:
 
