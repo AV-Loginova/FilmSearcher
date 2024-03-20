@@ -1,6 +1,7 @@
 # FilmSearcher
 ## Description:
-This project is a Movie Search Application built using React and Next.js. It allows users to search for movies by title and view detailed information about the selected movie.
+This project is a Movie Search Application built using React and Next.js. It allows users to search for movies by title and view detailed information about the selected movie.  
+![Запись экрана 2024-03-20 в 16 07 04](https://github.com/AV-Loginova/FilmSearcher/assets/129111624/d04fbcf8-9738-45d7-a608-4b5475f5c83a)
 
 ## Features:
 
